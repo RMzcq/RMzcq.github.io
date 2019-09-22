@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>内网穿透 on Mr. Zhao</title>
+    <link>http://localhost:1313/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</link>
+    <description>Recent content in 内网穿透 on Mr. Zhao</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 17 Nov 2018 18:54:06 +0000</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>如何内网穿透&#43;闲置的电脑能干啥？做服务器啊</title>
+      <link>http://localhost:1313/post/nat-ddns/</link>
+      <pubDate>Sat, 17 Nov 2018 18:54:06 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/nat-ddns/</guid>
+      <description>&lt;p&gt;内网穿透，举个例子，我有个笔记本，然后闲置了，连上网了，可是远程怎么用，虽然可以使用teamviewer这种，可以作为一种工具。不过对于我来说不合适。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

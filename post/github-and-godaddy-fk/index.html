@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>github 关联 godaddy 域名碰到的坑 - Mr. Zhao</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Mr.Zhao" /><meta name="description" content="故事起因，自己有一台服务器，原来博客是部署在上面的，这次打算公开并且开始真正的写博客了，想不公开服务器的ip，因为上面部署了好多东西，你懂的。所以后来就想还是用github吧，然后域名解析给我坑死了，下面说一下步骤吧，有问题可以联系我。
+" /><meta name="keywords" content="hello world, java, hugo" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.59.0-DEV with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/github-and-godaddy-fk/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="github 关联 godaddy 域名碰到的坑" />
+<meta property="og:description" content="故事起因，自己有一台服务器，原来博客是部署在上面的，这次打算公开并且开始真正的写博客了，想不公开服务器的ip，因为上面部署了好多东西，你懂的。所以后来就想还是用github吧，然后域名解析给我坑死了，下面说一下步骤吧，有问题可以联系我。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/github-and-godaddy-fk/" />
+<meta property="article:published_time" content="2018-09-24T22:43:35+00:00" />
+<meta property="article:modified_time" content="2018-09-24T22:43:35+00:00" />
+<meta itemprop="name" content="github 关联 godaddy 域名碰到的坑">
+<meta itemprop="description" content="故事起因，自己有一台服务器，原来博客是部署在上面的，这次打算公开并且开始真正的写博客了，想不公开服务器的ip，因为上面部署了好多东西，你懂的。所以后来就想还是用github吧，然后域名解析给我坑死了，下面说一下步骤吧，有问题可以联系我。">
+
+
+<meta itemprop="datePublished" content="2018-09-24T22:43:35&#43;00:00" />
+<meta itemprop="dateModified" content="2018-09-24T22:43:35&#43;00:00" />
+<meta itemprop="wordCount" content="951">
+
+
+
+<meta itemprop="keywords" content="github,godaddy," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="github 关联 godaddy 域名碰到的坑"/>
+<meta name="twitter:description" content="故事起因，自己有一台服务器，原来博客是部署在上面的，这次打算公开并且开始真正的写博客了，想不公开服务器的ip，因为上面部署了好多东西，你懂的。所以后来就想还是用github吧，然后域名解析给我坑死了，下面说一下步骤吧，有问题可以联系我。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Mr. Zhao</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/about/">
+        <li class="mobile-menu-item">About</li>
+      </a><a href="/tools/">
+        <li class="mobile-menu-item">Tools</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Mr. Zhao</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/about/">About</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tools/">Tools</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">github 关联 godaddy 域名碰到的坑</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2018-09-24 </span>
+        <div class="post-category">
+            <a href="/categories/%E5%B7%A5%E5%85%B7/"> 工具 </a>
+            </div>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#github-配置">github 配置</a></li>
+<li><a href="#我的域名是godaddy的-这个网站吧-坑">我的域名是godaddy的，这个网站吧，坑</a></li>
+<li><a href="#验证">验证</a></li>
+<li><a href="#github的chame的作用-可以看这个文章">github的chame的作用，可以看这个文章</a></li>
+<li><a href="#dns解析-a记录和chame的区别">dns解析，a记录和chame的区别</a></li>
+<li><a href="#发现的好用的工具">发现的好用的工具</a></li>
+<li><a href="#参考文章">参考文章</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>故事起因，自己有一台服务器，原来博客是部署在上面的，这次打算公开并且开始真正的写博客了，想不公开服务器的ip，因为上面部署了好多东西，你懂的。所以后来就想还是用github吧，然后域名解析给我坑死了，下面说一下步骤吧，有问题可以联系我。</p>
+
+<h2 id="github-配置">github 配置</h2>
+
+<p>我的项目已经部署在blog仓库中了，因此直接新建一个blog项目就ok了，网上好多教程，以前自己建立了io的仓库，这次拿来直接用，但是需要添加一个 CNAME 文件，自己添加了，但是每次hexo一编译就没了，后来查询了一下，放到source目录下就ok了（原来放在根目录下了），起初配置的 dddjava.com，网上好多教程都是这么说的，后来用了第二版，等会说。</p>
+
+<h2 id="我的域名是godaddy的-这个网站吧-坑">我的域名是godaddy的，这个网站吧，坑</h2>
+
+<p>里面注释写的不好，所以我一直搞不懂 a记录和chame的区别，区别看后面，这里先说教程，
+再说一点，好多教程用的第三方解析的，没有必要，出发国内外两套环境，可以用第三方解析
+* 一条a记录，配置成服务器的ip地址，这个ip地址，需要自己ping自己的github的博客地址得到，不要随便抄袭别人的教程上的，没用的，因为这东西老变。
+* 一条CNAME记录，配置的自己的  xxx.github.io
+然后剩下的ns记录不动，我其余的都删除了
+<img src="https://i.loli.net/2019/06/10/5cfe14ce0348b49105.jpg" alt="-w1113" />
+然后等了一会，我也不知道多久吧，今天给这个搞的恼火，吃完月饼，躺了一会，起来就想通了。</p>
+
+<h2 id="验证">验证</h2>
+
+<p>使用验证的时候发现，每次都是访问 www.dddjava.com 跳转到 dddjava.com 了，我一想，这不行啊，我原来的访问记录全丢失了啊（就是访问博客的人流量，其实没啥用，还有一点就是瞅着不喜欢），然后终于让我找到了教程，感谢大佬
+<a href="https://segmentfault.com/a/1190000005775893">https://segmentfault.com/a/1190000005775893</a>
+如何绑定二级域名，我就不献丑了，可以参考，感谢大佬的文章</p>
+
+<h2 id="github的chame的作用-可以看这个文章">github的chame的作用，可以看这个文章</h2>
+
+<p><a href="https://segmentfault.com/a/1190000011203711">https://segmentfault.com/a/1190000011203711</a>
+核心思想就是，服务器得有域名的配置，域名得有服务器的配置，要不怎么说github强大呢，啥都干！</p>
+
+<h2 id="dns解析-a记录和chame的区别">dns解析，a记录和chame的区别</h2>
+
+<p><img src="https://i.loli.net/2019/06/10/5cfe14ce5275955922.jpg" alt="" />
+<img src="https://i.loli.net/2019/06/10/5cfe14ceac42d47888.jpg" alt="" />
+这两张图片用的别人的（侵权删，看看人家tx，都给你写的明明白白，看go啥的没写）</p>
+
+<h2 id="发现的好用的工具">发现的好用的工具</h2>
+
+<p><img src="https://i.loli.net/2019/06/10/5cfe14cf06cf467371.jpg" alt="-w715" />
+在验证的过程中吧，为了验证自己的猜测，我就去抓别人博客的ip地址，进行验证，然后就知道他们也是挂载到github了，然后再去github参考一下，就明白了。<a href="http://www.ip138.com">http://www.ip138.com</a></p>
+
+<h2 id="参考文章">参考文章</h2>
+
+<ul>
+<li><a href="https://help.github.com/articles/setting-up-an-apex-domain/">https://help.github.com/articles/setting-up-an-apex-domain/</a></li>
+<li><a href="https://segmentfault.com/a/1190000011203711">https://segmentfault.com/a/1190000011203711</a></li>
+<li><a href="http://fengdaoting.com/2017/11/12/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E7%BB%91%E5%AE%9AGithub%E4%B8%8A%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%88%B0Godaddy%E5%9F%9F%E5%90%8D/">http://fengdaoting.com/2017/11/12/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E7%BB%91%E5%AE%9AGithub%E4%B8%8A%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%88%B0Godaddy%E5%9F%9F%E5%90%8D/</a></li>
+<li><a href="https://zerosrat.com/2016/11/13/Hexo-github-gages-blog-setup-and-migrate/">https://zerosrat.com/2016/11/13/Hexo-github-gages-blog-setup-and-migrate/</a></li>
+<li><a href="https://yucicheung.me/2018/03/14/%E4%B8%BAGithub-page%E7%BB%91%E5%AE%9A%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E5%B9%B6%E5%AE%9E%E7%8E%B0https%E8%AE%BF%E9%97%AE/">https://yucicheung.me/2018/03/14/%E4%B8%BAGithub-page%E7%BB%91%E5%AE%9A%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E5%B9%B6%E5%AE%9E%E7%8E%B0https%E8%AE%BF%E9%97%AE/</a></li>
+<li><a href="http://winterttr.me/2015/10/23/from-dns-to-github-custom-domain/">http://winterttr.me/2015/10/23/from-dns-to-github-custom-domain/</a>
+这篇文章，讲解的不错，就是没写完整的方案，哎！</li>
+</ul>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">Mr.Zhao</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2018-09-24
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a></span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/github/">github</a>
+          <a href="/tags/godaddy/">godaddy</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/github2/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">关于github部署的网站，网站图标不显示，以及“您与此网站之间建立的连接不安全”的解决方案</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/front_permission/">
+            <span class="next-text nav-default">前端权限</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+            repo="RMzcq/hugoBlogComments"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:jingtingchangqing@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/mjai9NMG1CWYx3Z" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/RMzcq" class="iconfont icon-github" title="github"></a>
+      <a href="https://space.bilibili.com/18281465" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2018 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Mr.Zhao</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-126257092-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>

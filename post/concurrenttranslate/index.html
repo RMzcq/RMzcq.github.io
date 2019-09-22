@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>concurrent包解析，翻译 - Mr. Zhao</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Mr.Zhao" /><meta name="description" content="版本记录
+刚开始第一版使用了ps注解翻译者（我）的一些疑问，标记 第二版使用mark这个标记，为了更好的区分 我本人比较笨，学并发也比较恼火，想了一下，还是翻译一下吧，欢迎大家指正，监督。 邮箱：jingtingchangqing@163.com jdk版本:1.8 工具:idea
+" /><meta name="keywords" content="hello world, java, hugo" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.59.0-DEV with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/concurrenttranslate/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="concurrent包解析，翻译" />
+<meta property="og:description" content="版本记录
+
+刚开始第一版使用了ps注解翻译者（我）的一些疑问，标记
+
+第二版使用mark这个标记，为了更好的区分
+
+我本人比较笨，学并发也比较恼火，想了一下，还是翻译一下吧，欢迎大家指正，监督。
+邮箱：jingtingchangqing@163.com
+jdk版本:1.8
+工具:idea" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/concurrenttranslate/" />
+<meta property="article:published_time" content="2018-10-18T22:45:50+00:00" />
+<meta property="article:modified_time" content="2018-10-18T22:45:50+00:00" />
+<meta itemprop="name" content="concurrent包解析，翻译">
+<meta itemprop="description" content="版本记录
+
+刚开始第一版使用了ps注解翻译者（我）的一些疑问，标记
+
+第二版使用mark这个标记，为了更好的区分
+
+我本人比较笨，学并发也比较恼火，想了一下，还是翻译一下吧，欢迎大家指正，监督。
+邮箱：jingtingchangqing@163.com
+jdk版本:1.8
+工具:idea">
+
+
+<meta itemprop="datePublished" content="2018-10-18T22:45:50&#43;00:00" />
+<meta itemprop="dateModified" content="2018-10-18T22:45:50&#43;00:00" />
+<meta itemprop="wordCount" content="533">
+
+
+
+<meta itemprop="keywords" content="并发,concurrency," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="concurrent包解析，翻译"/>
+<meta name="twitter:description" content="版本记录
+
+刚开始第一版使用了ps注解翻译者（我）的一些疑问，标记
+
+第二版使用mark这个标记，为了更好的区分
+
+我本人比较笨，学并发也比较恼火，想了一下，还是翻译一下吧，欢迎大家指正，监督。
+邮箱：jingtingchangqing@163.com
+jdk版本:1.8
+工具:idea"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Mr. Zhao</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/about/">
+        <li class="mobile-menu-item">About</li>
+      </a><a href="/tools/">
+        <li class="mobile-menu-item">Tools</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Mr. Zhao</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/about/">About</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tools/">Tools</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">concurrent包解析，翻译</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2018-10-18 </span>
+        <div class="post-category">
+            <a href="/categories/concurrency/"> concurrency </a>
+            </div>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#刚开始第一版使用了ps注解翻译者-我-的一些疑问-标记">刚开始第一版使用了ps注解翻译者（我）的一些疑问，标记</a></li>
+<li><a href="#第二版使用mark这个标记-为了更好的区分">第二版使用mark这个标记，为了更好的区分</a></li>
+</ul></li>
+<li><a href="#结构">结构</a></li>
+<li><a href="#准备工作">准备工作</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>版本记录</p>
+
+<h3 id="刚开始第一版使用了ps注解翻译者-我-的一些疑问-标记">刚开始第一版使用了ps注解翻译者（我）的一些疑问，标记</h3>
+
+<h3 id="第二版使用mark这个标记-为了更好的区分">第二版使用mark这个标记，为了更好的区分</h3>
+
+<p>我本人比较笨，学并发也比较恼火，想了一下，还是翻译一下吧，欢迎大家指正，监督。
+邮箱：jingtingchangqing@163.com
+jdk版本:1.8
+工具:idea</p>
+
+<p>翻译:google，我还是会尽量按照原文翻译，不会打乱顺序，挺喜欢倒装句的，有阅读能力的建议看原文，真的很赏心悦目。翻译的东西，原作版权归原作者所有。其他版权详情见文章末尾。</p>
+
+<h2 id="结构">结构</h2>
+
+<p>基于类的注解翻译
+基于各个方法的翻译
+产生了很大的疑虑，就是怎么做这个东西，这个系列讲解的就是材料，而我们经常看到的实际上是工具，是如何使用它们，这样的话就会形成一系列规范。
+现在想从这里了解一下。</p>
+
+<h2 id="准备工作">准备工作</h2>
+
+<p>找到对应的concurrent包，单击右键，选择<img src="https://i.loli.net/2019/06/10/5cfe14bf8166278111.jpg" alt="" />
+下面的show diagram，然后生成了一个uml图
+<img src="https://i.loli.net/2019/06/10/5cfe14c00069c83569.jpg" alt="" /></p>
+
+<p>有一个比较有毒的点，就是，内部的atomic和locks没有包含在里面，所以到时候单看，看的时候很清晰明了，比较大的几个“根”，executor，blockingqueue，delayed，future，concurrentmap。剩下的都比较单了，现在看起来就很清晰明了，是不。
+因此第一次做一个系列，有不足之处见谅。</p>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">Mr.Zhao</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2018-10-18
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a></span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E5%B9%B6%E5%8F%91/">并发</a>
+          <a href="/tags/concurrency/">concurrency</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/executor/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">1.executor</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/20181001riding/">
+            <span class="next-text nav-default">骑行 20181001总结【多图预警】</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+            repo="RMzcq/hugoBlogComments"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:jingtingchangqing@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/mjai9NMG1CWYx3Z" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/RMzcq" class="iconfont icon-github" title="github"></a>
+      <a href="https://space.bilibili.com/18281465" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2018 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Mr.Zhao</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-126257092-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>

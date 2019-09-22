@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Abouts on Mr. Zhao</title>
+    <link>http://localhost:1313/about/</link>
+    <description>Recent content in Abouts on Mr. Zhao</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 22 Sep 2019 21:33:09 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/about/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/about/</link>
+      <pubDate>Sun, 22 Sep 2019 21:33:09 +0800</pubDate>
+      
+      <guid>http://localhost:1313/about/about/</guid>
+      <description>目前本人属于java高级开发工程师，就职于一个互联网公司。喜欢骑车。 后续完善</description>
+    </item>
+    
+  </channel>
+</rss>

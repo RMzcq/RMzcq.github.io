@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>并发 on Mr. Zhao</title>
+    <link>http://localhost:1313/tags/%E5%B9%B6%E5%8F%91/</link>
+    <description>Recent content in 并发 on Mr. Zhao</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 18 Oct 2018 22:55:16 +0000</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/tags/%E5%B9%B6%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2.executorService</title>
+      <link>http://localhost:1313/post/executorservice/</link>
+      <pubDate>Thu, 18 Oct 2018 22:55:16 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/executorservice/</guid>
+      <description>&lt;h2 id=&#34;类翻译&#34;&gt;类翻译&lt;/h2&gt;
+
+&lt;p&gt;一个executor 可以提供方法来处理终止和产生一个 future 来记录一个或多个异步任务的进度。（mark，executor目前只是一个接口，目前还做不到。。。）
+一个executorService可以被关闭，这将会导致它拒绝新的任务。ExecutorServie提供了两个关闭方法。shutdown 方法在终止之前允许先前提交的任务执行完。shutdownNow 方法阻止等待的任务启动 并且尝试停止当前正在执行的任务。一旦终止，Executor没有执行中的任务，没有等待中的任务，没有新任务可以提交。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>1.executor</title>
+      <link>http://localhost:1313/post/executor/</link>
+      <pubDate>Thu, 18 Oct 2018 22:52:39 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/executor/</guid>
+      <description>&lt;h2 id=&#34;类翻译&#34;&gt;类翻译：&lt;/h2&gt;
+
+&lt;p&gt;这是一个执行提交的任务（Runnable）的对象。这个接口提供了一种解决任务提交的方法，就是每个任务如何运行的机制，包括线程如何使用的详情，调度等等。executor经常被用来替代 显示的创建线程。比如，
+对于每个线程，我们不用使用&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>concurrent包解析，翻译</title>
+      <link>http://localhost:1313/post/concurrenttranslate/</link>
+      <pubDate>Thu, 18 Oct 2018 22:45:50 +0000</pubDate>
+      
+      <guid>http://localhost:1313/post/concurrenttranslate/</guid>
+      <description>&lt;p&gt;版本记录&lt;/p&gt;
+
+&lt;h3 id=&#34;刚开始第一版使用了ps注解翻译者-我-的一些疑问-标记&#34;&gt;刚开始第一版使用了ps注解翻译者（我）的一些疑问，标记&lt;/h3&gt;
+
+&lt;h3 id=&#34;第二版使用mark这个标记-为了更好的区分&#34;&gt;第二版使用mark这个标记，为了更好的区分&lt;/h3&gt;
+
+&lt;p&gt;我本人比较笨，学并发也比较恼火，想了一下，还是翻译一下吧，欢迎大家指正，监督。
+邮箱：jingtingchangqing@163.com
+jdk版本:1.8
+工具:idea&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

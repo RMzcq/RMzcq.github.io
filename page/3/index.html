@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Mr. Zhao</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Mr.Zhao" /><meta name="description" content="Mr.Zhao Ordinary People." /><meta name="keywords" content="hello world, java, hugo" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.59.0-DEV with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/" />
+  <link href="http://localhost:1313/index.xml" rel="alternate" type="application/rss+xml" title="Mr. Zhao" />
+  <link href="http://localhost:1313/index.xml" rel="feed" type="application/rss+xml" title="Mr. Zhao" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Mr. Zhao" />
+<meta property="og:description" content="Mr.Zhao Ordinary People." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://localhost:1313/" />
+
+<meta property="og:updated_time" content="2019-09-22T21:39:54+08:00" />
+<meta itemprop="name" content="Mr. Zhao">
+<meta itemprop="description" content="Mr.Zhao Ordinary People.">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Mr. Zhao"/>
+<meta name="twitter:description" content="Mr.Zhao Ordinary People."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Mr. Zhao</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/about/">
+        <li class="mobile-menu-item">About</li>
+      </a><a href="/tools/">
+        <li class="mobile-menu-item">Tools</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Mr. Zhao</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/about/">About</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tools/">Tools</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/executor/">1.executor</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2018-10-18 </span>
+      <div class="post-category">
+          <a href="/categories/concurrency/"> concurrency </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <h2 id="类翻译">类翻译：</h2>
+
+<p>这是一个执行提交的任务（Runnable）的对象。这个接口提供了一种解决任务提交的方法，就是每个任务如何运行的机制，包括线程如何使用的详情，调度等等。executor经常被用来替代 显示的创建线程。比如，
+对于每个线程，我们不用使用</p>
+    </div>
+    <div class="read-more">
+      <a href="/post/executor/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/concurrenttranslate/">concurrent包解析，翻译</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2018-10-18 </span>
+      <div class="post-category">
+          <a href="/categories/concurrency/"> concurrency </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>版本记录</p>
+
+<h3 id="刚开始第一版使用了ps注解翻译者-我-的一些疑问-标记">刚开始第一版使用了ps注解翻译者（我）的一些疑问，标记</h3>
+
+<h3 id="第二版使用mark这个标记-为了更好的区分">第二版使用mark这个标记，为了更好的区分</h3>
+
+<p>我本人比较笨，学并发也比较恼火，想了一下，还是翻译一下吧，欢迎大家指正，监督。
+邮箱：jingtingchangqing@163.com
+jdk版本:1.8
+工具:idea</p>
+    </div>
+    <div class="read-more">
+      <a href="/post/concurrenttranslate/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/20181001riding/">骑行 20181001总结【多图预警】</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2018-10-10 </span>
+      <div class="post-category">
+          <a href="/categories/%E9%AA%91%E8%A1%8C/"> 骑行 </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>今年十一骑行去了一趟山西大同，内蒙古包头，呼和浩特，乌兰察布，河北张家口，做个总结；</p>
+
+<h2 id="计划">计划</h2>
+
+<p>本来计划去山东的，但是想了一下，前年去过了，而且城市中也放不开速度。就想去西边和北边，北边呼伦贝尔草原有雨，而且不安全，所以往西边走，路线如下，北京-张家口-大同-鄂尔多斯-包头-呼和浩特-乌兰察布-张家口-北京，但是由于第一天5级大风，而且爬坡过多，路线变成了
+北京-张家口-大同-包头-呼和浩特-乌兰察布-张家口-北京（去掉了鄂尔多斯）</p>
+    </div>
+    <div class="read-more">
+      <a href="/post/20181001riding/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/github2/">关于github部署的网站，网站图标不显示，以及“您与此网站之间建立的连接不安全”的解决方案</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2018-09-24 </span>
+      <div class="post-category">
+          <a href="/categories/%E5%B7%A5%E5%85%B7/"> 工具 </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>这个自己本来是发现这个图标怎么部署用域名访问后不安全了，然后图标还没了？</p>
+    </div>
+    <div class="read-more">
+      <a href="/post/github2/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/github-and-godaddy-fk/">github 关联 godaddy 域名碰到的坑</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2018-09-24 </span>
+      <div class="post-category">
+          <a href="/categories/%E5%B7%A5%E5%85%B7/"> 工具 </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>故事起因，自己有一台服务器，原来博客是部署在上面的，这次打算公开并且开始真正的写博客了，想不公开服务器的ip，因为上面部署了好多东西，你懂的。所以后来就想还是用github吧，然后域名解析给我坑死了，下面说一下步骤吧，有问题可以联系我。</p>
+    </div>
+    <div class="read-more">
+      <a href="/post/github-and-godaddy-fk/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    </section>
+  
+  <nav class="pagination">
+    <a class="prev" href="/page/2/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text">上一页</span>
+      </a>
+    <a class="next" href="/page/4/">
+        <span class="next-text">下一页</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+  </nav>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:jingtingchangqing@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/mjai9NMG1CWYx3Z" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/RMzcq" class="iconfont icon-github" title="github"></a>
+      <a href="https://space.bilibili.com/18281465" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2018 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Mr.Zhao</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-126257092-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>
