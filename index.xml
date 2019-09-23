@@ -6,7 +6,7 @@
     <description>Recent content on Mr. Zhao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 22 Sep 2019 21:39:54 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 23 Sep 2019 19:48:24 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,6 +18,17 @@
       
       <guid>http://localhost:1313/about/about/</guid>
       <description>目前本人属于java高级开发工程师，就职于一个互联网公司。喜欢骑车。 后续完善</description>
+    </item>
+    
+    <item>
+      <title>Support</title>
+      <link>http://localhost:1313/tools/support/</link>
+      <pubDate>Mon, 23 Sep 2019 19:48:24 +0800</pubDate>
+      
+      <guid>http://localhost:1313/tools/support/</guid>
+      <description>&lt;p&gt;感谢那些赞助过的朋友，陌生人，谢谢！&lt;/p&gt;
+
+&lt;p&gt;打赏名单如下：&lt;/p&gt;</description>
     </item>
     
     <item>
