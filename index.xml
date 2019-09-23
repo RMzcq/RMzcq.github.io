@@ -32,15 +32,6 @@
     </item>
     
     <item>
-      <title>第一个工具</title>
-      <link>http://localhost:1313/tools/tool1/</link>
-      <pubDate>Sun, 22 Sep 2019 21:39:54 +0800</pubDate>
-      
-      <guid>http://localhost:1313/tools/tool1/</guid>
-      <description>&lt;p&gt;测试页面，后续更新！&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>idea搭建zookeeper源码服务器</title>
       <link>http://localhost:1313/post/zookeeper-opensource/</link>
       <pubDate>Thu, 18 Jul 2019 19:21:47 +0000</pubDate>
