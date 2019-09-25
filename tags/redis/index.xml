@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>redis on Mr. Zhao</title>
-    <link>http://localhost:1313/tags/redis/</link>
+    <link>https://www.dddjava.com/tags/redis/</link>
     <description>Recent content in redis on Mr. Zhao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Mon, 21 Jan 2019 20:14:05 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/redis/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.dddjava.com/tags/redis/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>redis在springboot 2版本下的使用的问题</title>
-      <link>http://localhost:1313/post/redisproblem/</link>
+      <link>https://www.dddjava.com/post/redisproblem/</link>
       <pubDate>Mon, 21 Jan 2019 20:14:05 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/redisproblem/</guid>
+      <guid>https://www.dddjava.com/post/redisproblem/</guid>
       <description>&lt;p&gt;今天起的新项目使用spring session redis。
 抛出了几个问题，问题异常不贴了&lt;/p&gt;</description>
     </item>

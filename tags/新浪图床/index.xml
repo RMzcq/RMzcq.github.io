@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>新浪图床 on Mr. Zhao</title>
-    <link>http://localhost:1313/tags/%E6%96%B0%E6%B5%AA%E5%9B%BE%E5%BA%8A/</link>
+    <link>https://www.dddjava.com/tags/%E6%96%B0%E6%B5%AA%E5%9B%BE%E5%BA%8A/</link>
     <description>Recent content in 新浪图床 on Mr. Zhao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Fri, 26 Oct 2018 10:21:16 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/%E6%96%B0%E6%B5%AA%E5%9B%BE%E5%BA%8A/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.dddjava.com/tags/%E6%96%B0%E6%B5%AA%E5%9B%BE%E5%BA%8A/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>解决图床问题-坑爹的“免费”七牛云</title>
-      <link>http://localhost:1313/post/img/</link>
+      <link>https://www.dddjava.com/post/img/</link>
       <pubDate>Fri, 26 Oct 2018 10:21:16 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/img/</guid>
+      <guid>https://www.dddjava.com/post/img/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;原来按照好多教程，使用了七牛云的图床，不错，但是正因为是免费的，域名失效了！！！然后图片全都不行了，只能寻找新的图床，历经挫折。下面将我的解决方案分享出来；&lt;/p&gt;</description>

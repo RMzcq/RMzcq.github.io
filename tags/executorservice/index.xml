@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>executorService on Mr. Zhao</title>
-    <link>http://localhost:1313/tags/executorservice/</link>
+    <link>https://www.dddjava.com/tags/executorservice/</link>
     <description>Recent content in executorService on Mr. Zhao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Thu, 18 Oct 2018 22:55:16 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/executorservice/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.dddjava.com/tags/executorservice/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>2.executorService</title>
-      <link>http://localhost:1313/post/executorservice/</link>
+      <link>https://www.dddjava.com/post/executorservice/</link>
       <pubDate>Thu, 18 Oct 2018 22:55:16 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/executorservice/</guid>
+      <guid>https://www.dddjava.com/post/executorservice/</guid>
       <description>&lt;h2 id=&#34;类翻译&#34;&gt;类翻译&lt;/h2&gt;
 
 &lt;p&gt;一个executor 可以提供方法来处理终止和产生一个 future 来记录一个或多个异步任务的进度。（mark，executor目前只是一个接口，目前还做不到。。。）

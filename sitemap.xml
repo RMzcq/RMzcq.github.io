@@ -1,386 +1,386 @@
-<?xml-stylesheet type="text/xsl" href="http://localhost:1313/sitemap.xsl"?>
+<?xml-stylesheet type="text/xsl" href="https://www.dddjava.com/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://localhost:1313/about/about/</loc>
+    <loc>https://www.dddjava.com/about/about/</loc>
     <lastmod>2019-09-22T21:33:09+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://www.dddjava.com/</loc>
     <lastmod>2019-09-23T19:48:24+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tools/support/</loc>
+    <loc>https://www.dddjava.com/tools/support/</loc>
     <lastmod>2019-09-23T19:48:24+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tools/</loc>
+    <loc>https://www.dddjava.com/tools/</loc>
     <lastmod>2019-09-23T19:48:24+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://www.dddjava.com/about/</loc>
     <lastmod>2019-09-22T21:33:09+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://www.dddjava.com/categories/</loc>
     <lastmod>2019-07-18T19:21:47+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/zookeeper-opensource/</loc>
+    <loc>https://www.dddjava.com/post/zookeeper-opensource/</loc>
     <lastmod>2019-07-18T19:21:47+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/oss/</loc>
+    <loc>https://www.dddjava.com/categories/oss/</loc>
     <lastmod>2019-07-18T19:21:47+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/</loc>
+    <loc>https://www.dddjava.com/post/</loc>
     <lastmod>2019-07-18T19:21:47+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://www.dddjava.com/tags/</loc>
     <lastmod>2019-07-18T19:21:47+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/%E5%BC%80%E6%BA%90/</loc>
+    <loc>https://www.dddjava.com/tags/%E5%BC%80%E6%BA%90/</loc>
     <lastmod>2019-07-18T19:21:47+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/%E7%85%B2%E8%80%B3%E6%9C%BA/</loc>
+    <loc>https://www.dddjava.com/tags/%E7%85%B2%E8%80%B3%E6%9C%BA/</loc>
     <lastmod>2019-02-23T23:11:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/%E7%94%9F%E6%B4%BB/</loc>
+    <loc>https://www.dddjava.com/categories/%E7%94%9F%E6%B4%BB/</loc>
     <lastmod>2019-02-23T23:11:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/earphone/</loc>
+    <loc>https://www.dddjava.com/post/earphone/</loc>
     <lastmod>2019-02-23T23:11:40+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/redis/</loc>
+    <loc>https://www.dddjava.com/tags/redis/</loc>
     <lastmod>2019-01-21T20:14:05+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/redis/</loc>
+    <loc>https://www.dddjava.com/categories/redis/</loc>
     <lastmod>2019-01-21T20:14:05+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/redisproblem/</loc>
+    <loc>https://www.dddjava.com/post/redisproblem/</loc>
     <lastmod>2019-01-21T20:14:05+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/spring-boot/</loc>
+    <loc>https://www.dddjava.com/tags/spring-boot/</loc>
     <lastmod>2019-01-21T20:14:05+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/spring-session/</loc>
+    <loc>https://www.dddjava.com/tags/spring-session/</loc>
     <lastmod>2019-01-21T20:14:05+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</loc>
+    <loc>https://www.dddjava.com/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</loc>
     <lastmod>2018-11-17T18:54:06+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/nat-ddns/</loc>
+    <loc>https://www.dddjava.com/post/nat-ddns/</loc>
     <lastmod>2018-11-17T18:54:06+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/%E7%BD%91%E7%BB%9C/</loc>
+    <loc>https://www.dddjava.com/categories/%E7%BD%91%E7%BB%9C/</loc>
     <lastmod>2018-11-17T18:54:06+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/centos/</loc>
+    <loc>https://www.dddjava.com/tags/centos/</loc>
     <lastmod>2018-11-17T16:29:17+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/centos/</loc>
+    <loc>https://www.dddjava.com/categories/centos/</loc>
     <lastmod>2018-11-17T16:29:17+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/system/</loc>
+    <loc>https://www.dddjava.com/tags/system/</loc>
     <lastmod>2018-11-17T16:29:17+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/centos/</loc>
+    <loc>https://www.dddjava.com/post/centos/</loc>
     <lastmod>2018-11-17T16:29:17+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/license/</loc>
+    <loc>https://www.dddjava.com/categories/license/</loc>
     <lastmod>2018-11-08T18:36:19+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/opensource-license/</loc>
+    <loc>https://www.dddjava.com/post/opensource-license/</loc>
     <lastmod>2018-11-08T18:36:19+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/programmer_tool/</loc>
+    <loc>https://www.dddjava.com/post/programmer_tool/</loc>
     <lastmod>2018-11-07T15:40:27+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/%E5%B7%A5%E5%85%B7/</loc>
+    <loc>https://www.dddjava.com/tags/%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2018-11-07T15:40:27+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/%E5%B7%A5%E5%85%B7/</loc>
+    <loc>https://www.dddjava.com/categories/%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2018-11-07T15:40:27+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/%E5%9B%BE%E5%BA%8A/</loc>
+    <loc>https://www.dddjava.com/tags/%E5%9B%BE%E5%BA%8A/</loc>
     <lastmod>2018-10-26T10:21:16+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/%E6%96%B0%E6%B5%AA%E5%9B%BE%E5%BA%8A/</loc>
+    <loc>https://www.dddjava.com/tags/%E6%96%B0%E6%B5%AA%E5%9B%BE%E5%BA%8A/</loc>
     <lastmod>2018-10-26T10:21:16+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/img/</loc>
+    <loc>https://www.dddjava.com/post/img/</loc>
     <lastmod>2018-10-26T10:21:16+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/google-driver/</loc>
+    <loc>https://www.dddjava.com/tags/google-driver/</loc>
     <lastmod>2018-10-19T17:51:33+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/ss/</loc>
+    <loc>https://www.dddjava.com/tags/ss/</loc>
     <lastmod>2018-10-19T17:51:33+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/googledriver-problem1/</loc>
+    <loc>https://www.dddjava.com/post/googledriver-problem1/</loc>
     <lastmod>2018-10-19T17:51:33+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/executorservice/</loc>
+    <loc>https://www.dddjava.com/post/executorservice/</loc>
     <lastmod>2018-10-18T22:55:16+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/concurrency/</loc>
+    <loc>https://www.dddjava.com/tags/concurrency/</loc>
     <lastmod>2018-10-18T22:55:16+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/concurrency/</loc>
+    <loc>https://www.dddjava.com/categories/concurrency/</loc>
     <lastmod>2018-10-18T22:55:16+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/executorservice/</loc>
+    <loc>https://www.dddjava.com/tags/executorservice/</loc>
     <lastmod>2018-10-18T22:55:16+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/%E5%B9%B6%E5%8F%91/</loc>
+    <loc>https://www.dddjava.com/tags/%E5%B9%B6%E5%8F%91/</loc>
     <lastmod>2018-10-18T22:55:16+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/executor/</loc>
+    <loc>https://www.dddjava.com/post/executor/</loc>
     <lastmod>2018-10-18T22:52:39+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/executor/</loc>
+    <loc>https://www.dddjava.com/tags/executor/</loc>
     <lastmod>2018-10-18T22:52:39+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/concurrenttranslate/</loc>
+    <loc>https://www.dddjava.com/post/concurrenttranslate/</loc>
     <lastmod>2018-10-18T22:45:50+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/%E9%AA%91%E8%A1%8C/</loc>
+    <loc>https://www.dddjava.com/tags/%E9%AA%91%E8%A1%8C/</loc>
     <lastmod>2018-10-10T17:25:48+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/%E9%AA%91%E8%A1%8C/</loc>
+    <loc>https://www.dddjava.com/categories/%E9%AA%91%E8%A1%8C/</loc>
     <lastmod>2018-10-10T17:25:48+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/20181001riding/</loc>
+    <loc>https://www.dddjava.com/post/20181001riding/</loc>
     <lastmod>2018-10-10T17:25:48+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/github/</loc>
+    <loc>https://www.dddjava.com/tags/github/</loc>
     <lastmod>2018-09-24T23:17:57+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/github2/</loc>
+    <loc>https://www.dddjava.com/post/github2/</loc>
     <lastmod>2018-09-24T23:17:57+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/github-and-godaddy-fk/</loc>
+    <loc>https://www.dddjava.com/post/github-and-godaddy-fk/</loc>
     <lastmod>2018-09-24T22:43:35+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/godaddy/</loc>
+    <loc>https://www.dddjava.com/tags/godaddy/</loc>
     <lastmod>2018-09-24T22:43:35+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/%E5%89%8D%E7%AB%AF/</loc>
+    <loc>https://www.dddjava.com/tags/%E5%89%8D%E7%AB%AF/</loc>
     <lastmod>2018-09-20T15:42:06+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/%E5%89%8D%E7%AB%AF/</loc>
+    <loc>https://www.dddjava.com/categories/%E5%89%8D%E7%AB%AF/</loc>
     <lastmod>2018-09-20T15:42:06+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/front_permission/</loc>
+    <loc>https://www.dddjava.com/post/front_permission/</loc>
     <lastmod>2018-09-20T15:42:06+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

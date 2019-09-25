@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>前端 on Mr. Zhao</title>
-    <link>http://localhost:1313/categories/%E5%89%8D%E7%AB%AF/</link>
+    <link>https://www.dddjava.com/categories/%E5%89%8D%E7%AB%AF/</link>
     <description>Recent content in 前端 on Mr. Zhao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Thu, 20 Sep 2018 15:42:06 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/categories/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.dddjava.com/categories/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>前端权限</title>
-      <link>http://localhost:1313/post/front_permission/</link>
+      <link>https://www.dddjava.com/post/front_permission/</link>
       <pubDate>Thu, 20 Sep 2018 15:42:06 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/front_permission/</guid>
+      <guid>https://www.dddjava.com/post/front_permission/</guid>
       <description>&lt;h1 id=&#34;前端技术&#34;&gt;前端技术&lt;/h1&gt;
 
 &lt;ul&gt;

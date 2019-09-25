@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>executor on Mr. Zhao</title>
-    <link>http://localhost:1313/tags/executor/</link>
+    <link>https://www.dddjava.com/tags/executor/</link>
     <description>Recent content in executor on Mr. Zhao</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Thu, 18 Oct 2018 22:52:39 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/executor/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.dddjava.com/tags/executor/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>1.executor</title>
-      <link>http://localhost:1313/post/executor/</link>
+      <link>https://www.dddjava.com/post/executor/</link>
       <pubDate>Thu, 18 Oct 2018 22:52:39 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/executor/</guid>
+      <guid>https://www.dddjava.com/post/executor/</guid>
       <description>&lt;h2 id=&#34;类翻译&#34;&gt;类翻译：&lt;/h2&gt;
 
 &lt;p&gt;这是一个执行提交的任务（Runnable）的对象。这个接口提供了一种解决任务提交的方法，就是每个任务如何运行的机制，包括线程如何使用的详情，调度等等。executor经常被用来替代 显示的创建线程。比如，
