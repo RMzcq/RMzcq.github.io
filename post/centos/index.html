@@ -24,7 +24,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.59.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.60.0-DEV with theme even" />
 
 
 <link rel="canonical" href="https://www.dddjava.com/post/centos/" />
@@ -190,7 +190,7 @@
 华硕电脑选择F2
 然后调整boot顺序
 然后到如下页面后
-<img src="https://i.loli.net/2019/06/10/5cfe14c02c42276143.jpg" alt="" /></p>
+<img src="https://i.loli.net/2019/11/03/mjHtOw854Zxpl2W.jpg" alt="" /></p>
 
 <p>这一步的时候，网上教程说是按着e编辑，我这按了好久不行，结果发现是table键，有英文提示，然后将
 vmlinuz initrd=initrd.img inst.stage2=hd:LABEL=CentOS\x207\x20x86_64 quiet
@@ -199,7 +199,7 @@ vmlinuz initrd=initrd.img linux dd quiet</p>
 
 <p>然后按回车就行
 这里显示的硬盘的信息
-<img src="https://i.loli.net/2019/06/10/5cfe14c5d361425462.jpg" alt="" /></p>
+<img src="https://i.loli.net/2019/11/03/Kpq1XzO79BV2gjH.jpg" alt="" /></p>
 
 <p>网上的图，我的是sdb4
 使用ctrl alt del重启不行，然后我就关了电源，继续进入，然后按住table，编辑如下
@@ -208,23 +208,23 @@ vmlinuz initrd=initrd.img inst.stage2=hd:LABEL=CentOS\x207\x20x86_64 quiet
 改成
 vmlinuz initrd=initrd.img inst.stage2=hd:/dev/sda4（上一步查看的你自己的U盘盘符） quiet
 然后按回车就ok了。
-<img src="https://i.loli.net/2019/06/10/5cfe14c63440086816.jpg" alt="" /></p>
+<img src="https://i.loli.net/2019/11/03/Y5KpiVlrajkR6UI.jpg" alt="" /></p>
 
 <p>1，2，3都默认好了，中文的，
 4的话，我选择了gnome桌面，毕竟方便看一些
-<img src="https://i.loli.net/2019/06/10/5cfe14c6ab20498329.jpg" alt="" /></p>
+<img src="https://i.loli.net/2019/11/03/WqYJdy4cfPZHoUC.jpg" alt="" /></p>
 
-<p><img src="https://i.loli.net/2019/06/10/5cfe14c70846f87546.jpg" alt="" /></p>
+<p><img src="https://i.loli.net/2019/11/03/g4wrv72SnjtHVXa.jpg" alt="" /></p>
 
 <p>5的话，我选择的自动分区，比较懒。。。
-<img src="https://i.loli.net/2019/06/10/5cfe14c756cc729101.jpg" alt="" /></p>
+<img src="https://i.loli.net/2019/11/03/S51TngPbpxsLlwV.jpg" alt="" /></p>
 
 <p>6这里的话，选择一下wifi或者有线
-<img src="https://i.loli.net/2019/06/10/5cfe14cd5dad627105.jpg" alt="" /></p>
+<img src="https://i.loli.net/2019/11/03/OjuQm7grcZsSbil.jpg" alt="" /></p>
 
 <p>开始安装吧
 然后下一步设置一下密码就ok了。最好别用大写，有时间会坑，因为这个切换大小写忘了之后就完了。我就是找了好久发现一个本来应该小写的结果大写了，密码都搞错了，后来修改了。
-<img src="https://i.loli.net/2019/06/10/5cfe14cda21f164895.jpg" alt="" /></p>
+<img src="https://i.loli.net/2019/11/03/Zmzl1kPWEpL7CIs.jpg" alt="" /></p>
 
 <p>记得！！！拔掉u盘，然后就ok了。</p>
 

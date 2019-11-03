@@ -24,7 +24,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.59.0-DEV with theme even" />
+<meta name="generator" content="Hugo 0.60.0-DEV with theme even" />
 
 
 <link rel="canonical" href="https://www.dddjava.com/post/redisproblem/" />
@@ -189,12 +189,12 @@
 </div>
 <p>只添加这一个是不行的，因为我们如果打开pom文件会发现，虽然引用了 spring-data-redis ，但是其中的两个driver</p>
 
-<p><img src="https://i.loli.net/2019/06/10/5cfe14be5538468970.jpg" alt="500f7dd1d623e0017c4044689ebe9925" /></p>
+<p><img src="https://i.loli.net/2019/11/03/uNI1l75VpcYzbyk.jpg" alt="500f7dd1d623e0017c4044689ebe9925" /></p>
 
 <p>都是option的，可选择的，所以在主要的项目中得指定一个redis客户端。
 从2.0开始，spring 默认使用的 lettuce 客户端，我们可以添加上他就ok了。</p>
 
-<p><img src="https://i.loli.net/2019/06/10/5cfe14bea8d8e41984.jpg" alt="0ab3127c8689cbf40542219fd12643a8" /></p>
+<p><img src="https://i.loli.net/2019/11/03/Fn5WTOtGZMSmwIR.jpg" alt="0ab3127c8689cbf40542219fd12643a8" /></p>
 
 <p>如图所示，commons包也是option的，所以也得添加。
 如果想使用jedis客户端，那么就直接引用jedis客户端就行了，去掉截图中的两个引用。</p>
@@ -206,7 +206,7 @@
 
 <p>那么将截图中的timeout配置项去掉就可以了。</p>
 
-<p><img src="https://i.loli.net/2019/06/10/5cfe14bf3084a95083.jpg" alt="28145be2d53fc6d26afe3d705e163369" /></p>
+<p><img src="https://i.loli.net/2019/11/03/K7nqGLWjU5aQO1S.jpg" alt="28145be2d53fc6d26afe3d705e163369" /></p>
 
 <h1 id="说明一下">说明一下</h1>
 
