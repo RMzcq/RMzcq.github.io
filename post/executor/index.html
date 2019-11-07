@@ -57,7 +57,7 @@
 
 <meta itemprop="datePublished" content="2018-10-18T22:52:39&#43;00:00" />
 <meta itemprop="dateModified" content="2018-10-18T22:52:39&#43;00:00" />
-<meta itemprop="wordCount" content="1108">
+<meta itemprop="wordCount" content="1106">
 
 
 
@@ -307,8 +307,9 @@
 
 <p>在当前包中，ExecutorService 继承了Executor，ExecutorService 是一个更广泛的接口。ThreadPoolExecutor 提供了一个可扩展的线程池实现方式。Executors 为executors提供了方便的工厂方法。</p>
 
-<p>内存一致性效果：在“优先”提交一个runnable对象到executor的线程中，happens-before executor的执行操作，（这个执行操作）可能在另外的线程中；
-ps:没太懂，这里讲这个的意思，虽然知道happens-before原则，但是不太理解这里，有了解的可以私信我，或者留言。</p>
+<p>内存一致性效果：在“优先”提交一个runnable对象到executor的线程中，happens-before executor的执行操作，（这个执行操作）可能在另外的线程中；</p>
+
+<p>ps:没太懂，这里讲这个的意思，虽然知道happens-before原则，但是不太理解这里，有了解的可以私信我，或者留言。</p>
 
 <h2 id="方法翻译">方法翻译</h2>
 
@@ -323,10 +324,14 @@ ps:没太懂，这里讲这个的意思，虽然知道happens-before原则，但
 </div>
 <p>ps:没有返回值，只有一个runnable对象。</p>
 
-<p>在将来的某个时间点，执行赋予的runnable，这个runnable可能在一个新线程，在一个线程池中的线程，或者在一个被调用的线程执行，不过这个由实现自己决定。
-会抛出两种异常
-* RejectedExecutionException，task不被executor接受
-* NullPointerException runnable 为空异常</p>
+<p>在将来的某个时间点，执行赋予的runnable，这个runnable可能在一个新线程，在一个线程池中的线程，或者在一个被调用的线程执行，不过这个由实现自己决定。</p>
+
+<p>会抛出两种异常</p>
+
+<ul>
+<li>RejectedExecutionException，task不被executor接受</li>
+<li>NullPointerException runnable 为空异常</li>
+</ul>
     </div>
 
     <div class="post-copyright">

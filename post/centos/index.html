@@ -53,7 +53,7 @@
 
 <meta itemprop="datePublished" content="2018-11-17T16:29:17&#43;00:00" />
 <meta itemprop="dateModified" content="2018-11-17T16:29:17&#43;00:00" />
-<meta itemprop="wordCount" content="1534">
+<meta itemprop="wordCount" content="1550">
 
 
 
@@ -150,22 +150,16 @@
 <ul>
 <li>
 <ul>
-<li><a href="#下载centos-去官网下载就ok了-用的dvd版本-那个版本都行-最好不要用迅雷啥的下载-那样子还得校验md5-网速快的的话使用浏览器默认的下载工具几分钟的事情">下载centos，去官网下载就ok了，用的dvd版本。那个版本都行，最好不要用迅雷啥的下载，那样子还得校验md5，网速快的的话使用浏览器默认的下载工具几分钟的事情</a></li>
-<li><a href="#使用u深度-老毛桃都行-直接制作iso模式-不要使用智能模式">使用u深度，老毛桃都行，直接制作iso模式，不要使用智能模式！！！</a></li>
+<li><a href="#下载centos">下载centos</a></li>
+<li><a href="#制作iso">制作iso</a></li>
 <li><a href="#安装">安装</a></li>
 <li><a href="#开始ssh远程连接">开始ssh远程连接</a>
 <ul>
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
 <li><a href="#查看本机是否安装ssh软件包">查看本机是否安装SSH软件包</a></li>
-</ul></li>
+<li><a href="#开启-ssh-服务">开启 SSH 服务</a></li>
+<li><a href="#查看tcp-22端口是否打开">查看TCP 22端口是否打开</a></li>
+<li><a href="#接下来便可使用终端仿真程序-例如putty-去登陆远程主机">接下来便可使用终端仿真程序（例如putty）去登陆远程主机</a></li>
 <li><a href="#客户端使用">客户端使用</a></li>
-</ul></li>
-</ul></li>
 </ul></li>
 <li><a href="#问题">问题</a></li>
 <li><a href="#centos7-笔记本关系合盖睡眠">centos7 笔记本关系合盖睡眠</a></li>
@@ -178,103 +172,195 @@
       <p>如何使用U盘安装centos
 自从换了mac本之后，Windows本就很少用了，本来便宜卖给兄弟的，但是嫂子嫌弃太沉了。就一直搁置着，现在因为需要学习些东西，需要将他搞成Linux，因为自己的服务器也是centos的，所以就装的centos，然后再搞一个内网穿透外网就ok了。踩了不少坑，下面把步骤列出来</p>
 
-<h2 id="下载centos-去官网下载就ok了-用的dvd版本-那个版本都行-最好不要用迅雷啥的下载-那样子还得校验md5-网速快的的话使用浏览器默认的下载工具几分钟的事情">下载centos，去官网下载就ok了，用的dvd版本。那个版本都行，最好不要用迅雷啥的下载，那样子还得校验md5，网速快的的话使用浏览器默认的下载工具几分钟的事情</h2>
+<h2 id="下载centos">下载centos</h2>
 
-<h2 id="使用u深度-老毛桃都行-直接制作iso模式-不要使用智能模式">使用u深度，老毛桃都行，直接制作iso模式，不要使用智能模式！！！</h2>
+<p>去官网下载就ok了，用的dvd版本。那个版本都行，最好不要用迅雷啥的下载，那样子还得校验md5，网速快的的话使用浏览器默认的下载工具几分钟的事情。</p>
 
-<p>这一步有坑，使用ios刻录到U盘中，相当于u盘就是iso了，如果使用的智能模式，那么还得拷贝，主要是有一步识别的问题！</p>
+<h2 id="制作iso">制作iso</h2>
+
+<p>使用u深度，老毛桃都行，直接制作iso模式，不要使用智能模式！！！
+这一步有坑，使用ios刻录到U盘中，相当于u盘就是iso了，如果使用的智能模式，那么还得拷贝，主要是有一步识别的问题！</p>
 
 <h2 id="安装">安装</h2>
 
-<p>插入u盘
-华硕电脑选择F2
-然后调整boot顺序
-然后到如下页面后
-<img src="https://i.loli.net/2019/11/03/mjHtOw854Zxpl2W.jpg" alt="" /></p>
+<p>插入u盘</p>
 
-<p>这一步的时候，网上教程说是按着e编辑，我这按了好久不行，结果发现是table键，有英文提示，然后将
-vmlinuz initrd=initrd.img inst.stage2=hd:LABEL=CentOS\x207\x20x86_64 quiet
-改成
-vmlinuz initrd=initrd.img linux dd quiet</p>
+<p>华硕电脑选择F2</p>
 
-<p>然后按回车就行
-这里显示的硬盘的信息
-<img src="https://i.loli.net/2019/11/03/Kpq1XzO79BV2gjH.jpg" alt="" /></p>
+<p>然后调整boot顺序</p>
 
-<p>网上的图，我的是sdb4
-使用ctrl alt del重启不行，然后我就关了电源，继续进入，然后按住table，编辑如下
-将
-vmlinuz initrd=initrd.img inst.stage2=hd:LABEL=CentOS\x207\x20x86_64 quiet
-改成
-vmlinuz initrd=initrd.img inst.stage2=hd:/dev/sda4（上一步查看的你自己的U盘盘符） quiet
-然后按回车就ok了。
-<img src="https://i.loli.net/2019/11/03/Y5KpiVlrajkR6UI.jpg" alt="" /></p>
+<p>然后到如下页面后</p>
 
-<p>1，2，3都默认好了，中文的，
-4的话，我选择了gnome桌面，毕竟方便看一些
-<img src="https://i.loli.net/2019/11/03/WqYJdy4cfPZHoUC.jpg" alt="" /></p>
+<p><img src="https://i.loli.net/2019/11/03/mjHtOw854Zxpl2W.jpg" alt="" /></p>
+
+<p>这一步的时候，网上教程说是按着e编辑，我这按了好久不行，结果发现是table键，有英文提示，然后将</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">vmlinuz initrd=initrd.img inst.stage2=hd:LABEL=CentOS\x207\x20x86_64 quiet</pre></td></tr></table>
+</div>
+</div>
+<p>改成</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">vmlinuz initrd=initrd.img linux dd quiet</pre></td></tr></table>
+</div>
+</div>
+<p>然后按回车就行</p>
+
+<p>这里显示的硬盘的信息</p>
+
+<p><img src="https://i.loli.net/2019/11/03/Kpq1XzO79BV2gjH.jpg" alt="" /></p>
+
+<p>网上的图，我的是sdb4</p>
+
+<p>使用ctrl alt del重启不行，然后我就关了电源，继续进入，然后按住table，编辑如下,将</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">vmlinuz initrd=initrd.img inst.stage2=hd:LABEL=CentOS\x207\x20x86_64 quiet</pre></td></tr></table>
+</div>
+</div>
+<p>改成</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">vmlinuz initrd=initrd.img inst.stage2=hd:/dev/sda4（上一步查看的你自己的U盘盘符） quiet</pre></td></tr></table>
+</div>
+</div>
+<p>然后按回车就ok了。</p>
+
+<p><img src="https://i.loli.net/2019/11/03/Y5KpiVlrajkR6UI.jpg" alt="" /></p>
+
+<p>1，2，3都默认好了，中文的，4的话，我选择了gnome桌面，毕竟方便看一些</p>
+
+<p><img src="https://i.loli.net/2019/11/03/WqYJdy4cfPZHoUC.jpg" alt="" /></p>
 
 <p><img src="https://i.loli.net/2019/11/03/g4wrv72SnjtHVXa.jpg" alt="" /></p>
 
-<p>5的话，我选择的自动分区，比较懒。。。
-<img src="https://i.loli.net/2019/11/03/S51TngPbpxsLlwV.jpg" alt="" /></p>
+<p>5的话，我选择的自动分区，比较懒。。。</p>
 
-<p>6这里的话，选择一下wifi或者有线
-<img src="https://i.loli.net/2019/11/03/OjuQm7grcZsSbil.jpg" alt="" /></p>
+<p><img src="https://i.loli.net/2019/11/03/S51TngPbpxsLlwV.jpg" alt="" /></p>
 
-<p>开始安装吧
-然后下一步设置一下密码就ok了。最好别用大写，有时间会坑，因为这个切换大小写忘了之后就完了。我就是找了好久发现一个本来应该小写的结果大写了，密码都搞错了，后来修改了。
-<img src="https://i.loli.net/2019/11/03/Zmzl1kPWEpL7CIs.jpg" alt="" /></p>
+<p>6这里的话，选择一下wifi或者有线</p>
+
+<p><img src="https://i.loli.net/2019/11/03/OjuQm7grcZsSbil.jpg" alt="" /></p>
+
+<p>开始安装吧</p>
+
+<p>然后下一步设置一下密码就ok了。最好别用大写，有时间会坑，因为这个切换大小写忘了之后就完了。我就是找了好久发现一个本来应该小写的结果大写了，密码都搞错了，后来修改了。</p>
+
+<p><img src="https://i.loli.net/2019/11/03/Zmzl1kPWEpL7CIs.jpg" alt="" /></p>
 
 <p>记得！！！拔掉u盘，然后就ok了。</p>
 
 <h2 id="开始ssh远程连接">开始ssh远程连接</h2>
 
-<p>默认已经安装了ssh，如果是dvd版本的话
-步骤如下：
+<p>默认已经安装了ssh，如果是dvd版本的话</p>
+
+<p>步骤如下：
 第一步</p>
 
-<h6 id="查看本机是否安装ssh软件包">查看本机是否安装SSH软件包</h6>
-
-<p>[root@localhost ~]# rpm -qa | grep ssh
+<h3 id="查看本机是否安装ssh软件包">查看本机是否安装SSH软件包</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[root@localhost ~]# rpm -qa | grep ssh
 openssh-server-6.6.1p1-12.el7_1.x86_64
 openssh-clients-6.6.1p1-12.el7_1.x86_64
 libssh2-1.4.3-8.el7.x86_64
-openssh-6.6.1p1-12.el7_1.x86_64</p>
+openssh-6.6.1p1-12.el7_1.x86_64</pre></td></tr></table>
+</div>
+</div>
+<p>###如果没有，则需要安装</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[root@localhost /]# yum install openssh-server</pre></td></tr></table>
+</div>
+</div>
+<p>第二步</p>
 
-<p>#####如果没有，则需要安装
-[root@localhost /]# yum install openssh-server
-第二步
-#####开启 SSH 服务
-[root@localhost ~]# service sshd start
-Redirecting to /bin/systemctl start  sshd.service</p>
-
-<p>#####查看TCP 22端口是否打开
-[root@localhost ~]# netstat -ntpl | grep 22
+<h3 id="开启-ssh-服务">开启 SSH 服务</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[root@localhost ~]# service sshd start
+Redirecting to /bin/systemctl start  sshd.service</pre></td></tr></table>
+</div>
+</div>
+<h3 id="查看tcp-22端口是否打开">查看TCP 22端口是否打开</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[root@localhost ~]# netstat -ntpl | grep 22
 tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      17816/sshd          
-tcp6       0      0 :::22                   :::*                    LISTEN      17816/sshd
-第三步</p>
+tcp6       0      0 :::22                   :::*                    LISTEN      17816/sshd</pre></td></tr></table>
+</div>
+</div>
+<p>第三步</p>
 
-<p>#####接下来便可使用终端仿真程序（例如putty）去登陆远程主机
-如果你在客户端不能连接SSH服务的话，那可能是防火墙的原因，终端命令行中输入 iptables -nL 来看是否开放了ssh tcp 22 端口：
-[root@localhost ~]# iptables -nL
-你可以将防火墙中的规则条目清除掉：
-[root@localhost ~]# iptables -F</p>
+<h3 id="接下来便可使用终端仿真程序-例如putty-去登陆远程主机">接下来便可使用终端仿真程序（例如putty）去登陆远程主机</h3>
 
-<h5 id="客户端使用">客户端使用</h5>
+<p>如果你在客户端不能连接SSH服务的话，那可能是防火墙的原因，终端命令行中输入 iptables -nL 来看是否开放了ssh tcp 22 端口：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[root@localhost ~]# iptables -nL</pre></td></tr></table>
+</div>
+</div>
+<p>你可以将防火墙中的规则条目清除掉：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[root@localhost ~]# iptables -F</pre></td></tr></table>
+</div>
+</div>
+<h3 id="客户端使用">客户端使用</h3>
 
-<p>ssh username@192.168.2.194
-或者mac本使用secureCrt</p>
+<p>ssh username@192.168.2.194</p>
+
+<p>或者mac本使用secureCrt</p>
 
 <h2 id="问题">问题</h2>
 
-<p>碰到了刚开始重启不成功，一直显示watchdog watchdog0: watchdog did not stop!
-然后更新了系统，然后重启还是有这个日志，不过会重启成功了。不行就直接按电源！</p>
+<p>碰到了刚开始重启不成功，一直显示watchdog watchdog0: watchdog did not stop!</p>
+
+<p>然后更新了系统，然后重启还是有这个日志，不过会重启成功了。不行就直接按电源！</p>
 
 <h2 id="centos7-笔记本关系合盖睡眠">centos7 笔记本关系合盖睡眠</h2>
 
-<p>由于是笔记本，经常需要关闭盖子，但是不能让他休眠！
-参考 <a href="https://blog.csdn.net/qq_34911465/article/details/70246193">https://blog.csdn.net/qq_34911465/article/details/70246193</a></p>
+<p>由于是笔记本，经常需要关闭盖子，但是不能让他休眠！</p>
+
+<p>参考 <a href="https://blog.csdn.net/qq_34911465/article/details/70246193">CentOS 7.0 笔记本关闭合盖睡眠</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><span class="lnt"> 1

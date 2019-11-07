@@ -226,8 +226,11 @@
     <div class="post-summary">
       <h2 id="类翻译">类翻译</h2>
 
-<p>一个executor 可以提供方法来处理终止和产生一个 future 来记录一个或多个异步任务的进度。（mark，executor目前只是一个接口，目前还做不到。。。）
-一个executorService可以被关闭，这将会导致它拒绝新的任务。ExecutorServie提供了两个关闭方法。shutdown 方法在终止之前允许先前提交的任务执行完。shutdownNow 方法阻止等待的任务启动 并且尝试停止当前正在执行的任务。一旦终止，Executor没有执行中的任务，没有等待中的任务，没有新任务可以提交。</p>
+<p>一个executor 可以提供方法来处理终止和产生一个 future 来记录一个或多个异步任务的进度。（mark，executor目前只是一个接口，目前还做不到。。。）</p>
+
+<p>一个executorService可以被关闭，这将会导致它拒绝新的任务。</p>
+
+<p>ExecutorServie提供了两个关闭方法。shutdown 方法在终止之前允许先前提交的任务执行完。shutdownNow 方法阻止等待的任务启动 并且尝试停止当前正在执行的任务。一旦终止，Executor没有执行中的任务，没有等待中的任务，没有新任务可以提交。</p>
     </div>
     <div class="read-more">
       <a href="/post/executorservice/" class="read-more-link">阅读更多</a>
