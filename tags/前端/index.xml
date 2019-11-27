@@ -17,8 +17,7 @@
       <pubDate>Thu, 20 Sep 2018 15:42:06 +0000</pubDate>
       
       <guid>https://www.dddjava.com/post/front_permission/</guid>
-      <description>&lt;h1 id=&#34;前端技术&#34;&gt;前端技术&lt;/h1&gt;
-
+      <description>&lt;h1 id=&#34;heading&#34;&gt;前端技术&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;实际上 前端控制了跳转以及返回值，前端自己做了路由设置&lt;/li&gt;
 &lt;li&gt;主要是根据token跳转&lt;/li&gt;

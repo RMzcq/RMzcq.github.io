@@ -43,11 +43,8 @@ ExecutorServie提供了两个关闭方法。shutdown 方法在终止之前允许
 
 <meta property="og:title" content="2.executorService" />
 <meta property="og:description" content="类翻译
-
 一个executor 可以提供方法来处理终止和产生一个 future 来记录一个或多个异步任务的进度。（mark，executor目前只是一个接口，目前还做不到。。。）
-
 一个executorService可以被关闭，这将会导致它拒绝新的任务。
-
 ExecutorServie提供了两个关闭方法。shutdown 方法在终止之前允许先前提交的任务执行完。shutdownNow 方法阻止等待的任务启动 并且尝试停止当前正在执行的任务。一旦终止，Executor没有执行中的任务，没有等待中的任务，没有新任务可以提交。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.dddjava.com/post/executorservice/" />
@@ -55,29 +52,20 @@ ExecutorServie提供了两个关闭方法。shutdown 方法在终止之前允许
 <meta property="article:modified_time" content="2018-10-18T22:55:16+00:00" />
 <meta itemprop="name" content="2.executorService">
 <meta itemprop="description" content="类翻译
-
 一个executor 可以提供方法来处理终止和产生一个 future 来记录一个或多个异步任务的进度。（mark，executor目前只是一个接口，目前还做不到。。。）
-
 一个executorService可以被关闭，这将会导致它拒绝新的任务。
-
 ExecutorServie提供了两个关闭方法。shutdown 方法在终止之前允许先前提交的任务执行完。shutdownNow 方法阻止等待的任务启动 并且尝试停止当前正在执行的任务。一旦终止，Executor没有执行中的任务，没有等待中的任务，没有新任务可以提交。">
-
-
 <meta itemprop="datePublished" content="2018-10-18T22:55:16&#43;00:00" />
 <meta itemprop="dateModified" content="2018-10-18T22:55:16&#43;00:00" />
-<meta itemprop="wordCount" content="946">
+<meta itemprop="wordCount" content="899">
 
 
 
-<meta itemprop="keywords" content="并发,concurrency,executorService," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="并发,concurrency,executorService," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="2.executorService"/>
 <meta name="twitter:description" content="类翻译
-
 一个executor 可以提供方法来处理终止和产生一个 future 来记录一个或多个异步任务的进度。（mark，executor目前只是一个接口，目前还做不到。。。）
-
 一个executorService可以被关闭，这将会导致它拒绝新的任务。
-
 ExecutorServie提供了两个关闭方法。shutdown 方法在终止之前允许先前提交的任务执行完。shutdownNow 方法阻止等待的任务启动 并且尝试停止当前正在执行的任务。一旦终止，Executor没有执行中的任务，没有等待中的任务，没有新任务可以提交。"/>
 
 <!--[if lte IE 9]>
@@ -164,71 +152,26 @@ ExecutorServie提供了两个关闭方法。shutdown 方法在终止之前允许
   <h2 class="post-toc-title">文章目录</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#类翻译">类翻译</a></li>
-<li><a href="#方法">方法</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#heading">类翻译</a></li>
+    <li><a href="#heading1">方法</a></li>
+  </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      <h2 id="类翻译">类翻译</h2>
-
+      <h2 id="heading">类翻译</h2>
 <p>一个executor 可以提供方法来处理终止和产生一个 future 来记录一个或多个异步任务的进度。（mark，executor目前只是一个接口，目前还做不到。。。）</p>
-
 <p>一个executorService可以被关闭，这将会导致它拒绝新的任务。</p>
-
 <p>ExecutorServie提供了两个关闭方法。shutdown 方法在终止之前允许先前提交的任务执行完。shutdownNow 方法阻止等待的任务启动 并且尝试停止当前正在执行的任务。一旦终止，Executor没有执行中的任务，没有等待中的任务，没有新任务可以提交。</p>
-
 <p>一个未被使用的ExecutorService应该被关闭来回收它的资源。</p>
-
 <p>submit 方法扩展了 Executor的基本方法 execute，通过创建并返回Future，Future可以用来取消执行 和/或者 等待（执行）完成。</p>
-
 <p>invokeAny 和 invokeAll 方法 是执行最通用的，有用的集合执行形式。执行集合任务，然后等待至少一个或全部完成。</p>
-
 <p>ExecutorCompletionService可以被用来编写这些方法的定制变体。
 Executors 为executor Service提供了方便的工厂方法。（mark：executor是也为executor提供了工厂）</p>
-
 <p>使用示例：</p>
-
 <p>这里有一个网络服务的草图，其中线程在线程池中来处理请求，他使用了预配置工厂方法（newFixedThreadPool）。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma"> *  &lt;pre&gt; {@code
+<pre><code> *  &lt;pre&gt; {@code
  * class NetworkService implements Runnable {
  *   private final ServerSocket serverSocket;
  *   private final ExecutorService pool;
@@ -256,35 +199,10 @@ Executors 为executor Service提供了方便的工厂方法。（mark：executor
  *   public void run() {
  *     // read and service request on socket
  *   }
- * }}&lt;/pre&gt;</pre></td></tr></table>
-</div>
-</div>
-<p>以下方法分为两个阶段关闭 ExecutorService，第一步通过</p>
-
+ * }}&lt;/pre&gt;
+</code></pre><p>以下方法分为两个阶段关闭 ExecutorService，第一步通过</p>
 <p>shutdown 来拒绝传入的任务，然后调用 shutdownNow ，如果必要的话，可以用来取消任何延迟任务。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma"> *  &lt;pre&gt; {@code
+<pre><code> *  &lt;pre&gt; {@code
  * void shutdownAndAwaitTermination(ExecutorService pool) {
  *   pool.shutdown(); // 禁止提交新任务
  *   try {
@@ -293,7 +211,7 @@ Executors 为executor Service提供了方便的工厂方法。（mark：executor
  *       pool.shutdownNow(); // 取消当前正在执行的任务
  *       // 等待一会让任务来反馈是否被取消了
  *       if (!pool.awaitTermination(60, TimeUnit.SECONDS))
- *           System.err.println(&#34;Pool did not terminate&#34;);
+ *           System.err.println(&quot;Pool did not terminate&quot;);
  *     }
  *   } catch (InterruptedException ie) {
  *     // （重新）取消如果当前线程被中断
@@ -301,13 +219,9 @@ Executors 为executor Service提供了方便的工厂方法。（mark：executor
  *     // 保留当前线程中断状态
  *     Thread.currentThread().interrupt();
  *   }
- * }}&lt;/pre&gt;</pre></td></tr></table>
-</div>
-</div>
-<p>内存一致性效果：和executor一样。</p>
-
-<h2 id="方法">方法</h2>
-
+ * }}&lt;/pre&gt;
+</code></pre><p>内存一致性效果：和executor一样。</p>
+<h2 id="heading1">方法</h2>
 <p>todo 最近时间比较紧，尽力而为</p>
     </div>
 

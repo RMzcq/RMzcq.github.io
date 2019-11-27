@@ -17,8 +17,7 @@
       <pubDate>Thu, 18 Jul 2019 19:21:47 +0000</pubDate>
       
       <guid>https://www.dddjava.com/post/zookeeper-opensource/</guid>
-      <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;heading&#34;&gt;背景&lt;/h2&gt;
 &lt;p&gt;今年的一个小目标就是看一个java的开源软件，首先从zookeeper入手，毕竟比别的”简单“些&lt;/p&gt;</description>
     </item>
     
@@ -28,8 +27,7 @@
       <pubDate>Thu, 08 Nov 2018 18:36:19 +0000</pubDate>
       
       <guid>https://www.dddjava.com/post/opensource-license/</guid>
-      <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;heading&#34;&gt;背景&lt;/h2&gt;
 &lt;p&gt;想开源自己的代码了&lt;/p&gt;</description>
     </item>
     

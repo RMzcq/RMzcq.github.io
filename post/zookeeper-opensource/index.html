@@ -41,7 +41,6 @@
 
 <meta property="og:title" content="idea搭建zookeeper源码服务器" />
 <meta property="og:description" content="背景
-
 今年的一个小目标就是看一个java的开源软件，首先从zookeeper入手，毕竟比别的”简单“些" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.dddjava.com/post/zookeeper-opensource/" />
@@ -49,21 +48,16 @@
 <meta property="article:modified_time" content="2019-07-18T19:21:47+00:00" />
 <meta itemprop="name" content="idea搭建zookeeper源码服务器">
 <meta itemprop="description" content="背景
-
 今年的一个小目标就是看一个java的开源软件，首先从zookeeper入手，毕竟比别的”简单“些">
-
-
 <meta itemprop="datePublished" content="2019-07-18T19:21:47&#43;00:00" />
 <meta itemprop="dateModified" content="2019-07-18T19:21:47&#43;00:00" />
-<meta itemprop="wordCount" content="537">
+<meta itemprop="wordCount" content="536">
 
 
 
-<meta itemprop="keywords" content="开源," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="开源," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="idea搭建zookeeper源码服务器"/>
 <meta name="twitter:description" content="背景
-
 今年的一个小目标就是看一个java的开源软件，首先从zookeeper入手，毕竟比别的”简单“些"/>
 
 <!--[if lte IE 9]>
@@ -150,70 +144,49 @@
   <h2 class="post-toc-title">文章目录</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#背景">背景</a></li>
-<li><a href="#搭建环境">搭建环境</a></li>
-</ul></li>
-<li><a href="#后记">后记</a></li>
-</ul>
+  <ul>
+    <li><a href="#heading">背景</a></li>
+    <li><a href="#heading1">搭建环境</a></li>
+  </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      <h2 id="背景">背景</h2>
-
+      <h2 id="heading">背景</h2>
 <p>今年的一个小目标就是看一个java的开源软件，首先从zookeeper入手，毕竟比别的”简单“些</p>
-
-<h2 id="搭建环境">搭建环境</h2>
-
+<h2 id="heading1">搭建环境</h2>
 <ul>
 <li>GitHub下载源码</li>
 <li>不要使用master分支，自己使用的时候，有实现类冲突，不知道后续会解决没有，因此选择了稳定版本3.5.5</li>
 <li>去掉 zookeeper-server项目中pom文件中的两个jetty的scope，因为咱们运行的时候，还是使用的jetty服务器，所以得引入进来，要不然会报错</li>
 </ul>
-
-<p><img src="https://i.loli.net/2019/11/03/HXhvRjE9q3Cmupa.png" alt="" /></p>
-
+<p><img src="https://i.loli.net/2019/11/03/HXhvRjE9q3Cmupa.png" alt=""></p>
 <ul>
 <li>添加resources编译，因为要不然resources目录不会编辑进入class文件夹，日志就出不来，会有警告</li>
 </ul>
-
-<p><img src="https://i.loli.net/2019/11/03/aHsDJxdITvAtobr.png" alt="" /></p>
-
+<p><img src="https://i.loli.net/2019/11/03/aHsDJxdITvAtobr.png" alt=""></p>
 <ul>
-<li>copy 根目录下的conf下的log4j文件到zookeeper-server项目下的resources下</li>
-
-<li><p>copy 根目录下的conf下的 zoo_sample.cfg到自己的文件目录下，修改端口最好，因为防止和brew搭建zookeeper冲突，可以更好的校验</p></li>
-
-<li><p>配置 zoo_sample.cfg 修改名字为 zoo.cfg，修改日志路径和端口如下：</p></li>
+<li>
+<p>copy 根目录下的conf下的log4j文件到zookeeper-server项目下的resources下</p>
+</li>
+<li>
+<p>copy 根目录下的conf下的 zoo_sample.cfg到自己的文件目录下，修改端口最好，因为防止和brew搭建zookeeper冲突，可以更好的校验</p>
+</li>
+<li>
+<p>配置 zoo_sample.cfg 修改名字为 zoo.cfg，修改日志路径和端口如下：</p>
+</li>
 </ul>
-
-<p><img src="https://i.loli.net/2019/11/03/SpOAK9aYCisNqcI.png" alt="" /></p>
-
+<p><img src="https://i.loli.net/2019/11/03/SpOAK9aYCisNqcI.png" alt=""></p>
 <ul>
 <li>配置idea启动，就ok了，有日志显示</li>
 </ul>
-
-<p><img src="https://i.loli.net/2019/11/03/HdE6LqrXlFp2DiO.png" alt="" /></p>
-
+<p><img src="https://i.loli.net/2019/11/03/HdE6LqrXlFp2DiO.png" alt=""></p>
 <ul>
-<li><p>测试</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">zkCli -server localhost:2189</pre></td></tr></table>
-</div>
-</div></li>
+<li>测试</li>
 </ul>
-
-<p>自己添加个对象，然后获取下，说明成功了，停用服务器，客户端再获取，会抛出异常，说明成功啦！</p>
-
-<h1 id="后记">后记</h1>
-
+<pre><code>zkCli -server localhost:2189
+</code></pre><p>自己添加个对象，然后获取下，说明成功了，停用服务器，客户端再获取，会抛出异常，说明成功啦！</p>
+<h1 id="heading2">后记</h1>
 <p>网上的18年3月份的教程都是ant编译的，但是现在maven已经支持了，所以省事了不少，有问题可以及时反馈我的邮箱和评论。</p>
     </div>
 
